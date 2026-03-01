@@ -1,2 +1,14 @@
 # Aulas-2026
-Material adicional para os cursos DS, CD e Logística
+Material adicional para os cursos:
+
+- Desenvovlimento de Sistemas
+  - Inteligência Artificial
+  - Versionamento de Código
+  - Processos de Desenvolvimento e Metodologias Ágeis
+
+- Ciência de Dados
+  - Análise de Dados
+  - Aprendizagem de Máquina
+
+- Logística
+  - Automação
