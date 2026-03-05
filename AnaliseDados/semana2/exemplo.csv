@@ -1,0 +1,16 @@
+Date,Product,Sales,Category,Quantity,Total_Revenue
+2026-01-01,Notebook,1500,Electronics,3,4500
+2026-01-02,Notebook,1500,Electronics,2,4500
+2026-01-02,Notebook,1500,Electronics,1,4500
+2026-01-02,Smartphone,2500,Electronics,5,12500
+2026-01-03,Headphones,300,Accessories,10,3000
+2026-01-04,Office Chair,800,Furniture,2,1600
+2026-01-05,Monitor,1200,Electronics,4,4800
+2026-01-06,Desk Lamp,150,Furniture,6,900
+2026-01-07,Keyboard,200,Accessories,8,1600
+2026-01-08,Mouse,100,Accessories,12,1200
+2026-01-09,Tablet,1800,Electronics,3,5400
+2026-01-08,Printer,900,Electronics,2,1800
+2026-01-09,Printer,900,Electronics,1,1800
+2026-01-10,Printer,100,Electronics,1,1800
+
