@@ -13,8 +13,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // mysql connection
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'joao',
-  password: '12345678',
+  user: '',
+  password: '',
   database: 'appnode'
 });
 

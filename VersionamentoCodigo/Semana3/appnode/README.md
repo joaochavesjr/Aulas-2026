@@ -40,5 +40,4 @@ Simple Node.js application with a registration page that stores user information
 - `GET /` - serves the form
 - `POST /register` - handles form submission and inserts into `users` table
 - `GET /users` - lists all registered users
-- `POST /register` - handles form submission and inserts into `users` table
 
