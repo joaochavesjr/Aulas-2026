@@ -1,5 +1,5 @@
 # Aulas-2026
-Material adicional para os cursos:
+Material adicional para os cursos técnicos:
 
 - Desenvovlimento de Sistemas
   - Inteligência Artificial
