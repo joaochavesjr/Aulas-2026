@@ -1,5 +1,5 @@
 # Aulas-2026
-Material adicional para os cursos técnicos:
+Material adicional para os cursos técnicos MVC:
 
 - Desenvovlimento de Sistemas
   - Inteligência Artificial
