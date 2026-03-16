@@ -1,0 +1,30 @@
+1. Automação e Navegação (AGVs e AMRs)
+Empilhadeiras Automatizadas (AGV/AMR): Utilizam inteligência artificial (IA) e sensores avançados para localizar, pegar e transportar cargas sem operador humano.
+Sensores de Navegação e Mapeamento: Tecnologias como LiDAR, câmeras 3D e sensores laser permitem que os equipamentos construam mapas do armazém e se movimentem autonomamente.
+Desvio de Obstáculos: Sensores em tempo real detectam humanos ou objetos e ajustam a rota automaticamente. 
+
+ 
+2. Telemática, IoT e Conectividade
+Internet das Coisas (IoT) e Monitoramento em Tempo Real: As máquinas estão conectadas à rede do armazém, enviando dados de desempenho, localização e estado da bateria (telemetria).
+Gestão de Frota e WMS: Integração direta com sistemas de gerenciamento de armazém (WMS), permitindo que a empilhadeira receba ordens de serviço diretamente no painel.
+Controle de Acesso e Operação: Sistemas que exigem cartões RFID, senhas ou biometria para ligar, garantindo que apenas operadores treinados utilizem o equipamento. 
+
+
+3. Segurança do Operador e do Ambiente
+Sensores de Segurança e Câmeras: Sistemas de visão computacional que detectam pedestres próximos, áreas de risco e carga instável.
+Luzes de Alerta (Blue Spot/Red Spot): Projeção de luz no chão para avisar pedestres sobre a aproximação da empilhadeira em áreas de pouca visibilidade.
+Estabilizadores e Sensores de Carga: Sistemas que reduzem a velocidade automaticamente em curvas ou limitam a altura de elevação com base no peso da carga.
+Direção Elétrica Servo Assistida: Transpaleteiras modernas com tecnologia que facilita a manobra e diminui o esforço físico. 
+
+
+4. Eletrificação e Eficiência Energética
+Baterias de Lítio-Íon: Substituição das baterias de chumbo-ácido por lítio, permitindo cargas rápidas (oportunidade) durante intervalos, sem necessidade de troca de bateria.
+Motores AC e Híbridos: Uso de motores de corrente alternada (AC) mais eficientes e duráveis, que reduzem o consumo de energia e a manutenção.
+Sistemas de Regeneração de Energia: A tecnologia de frenagem regenerativa converte a energia da frenagem em carga para a bateria, aumentando o tempo de operação. 
+
+ 
+5. Ergonomia e Conforto
+Plataformas Escamoteáveis: Plataformas para o operador nas transpaleteiras elétricas, que podem ser recolhidas, aumentando a versatilidade.
+Painéis Inteligentes: Telas sensíveis ao toque (touchscreen) que exibem diagnósticos da máquina em tempo real. 
+
+

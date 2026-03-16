@@ -1,0 +1,12 @@
+- ERP: Enterprise Resource Planning, (Planejamento de recursos empresariais)
+- WMS: Warehouse Management System (sistema de gerenciamento de armazéns)
+- Cross-docking: Instalação temporária de armazenagem de alta rotatividade 
+- E-commerce: Sistema de vendas on-line
+- Silo: Instalações metálicas ou em concreto destinado à armazenagem a granel (alimentos, minérios, cimento)
+- RFID: Identificação por rádiofrequência (TAG e antena)
+- IoT: Internet das coisas: Dispositivos eletrônicos como sensores, câmeras, atuadores, etc.
+- Picking: Separação de produtos 
+- Packing: Embalagem
+
+
+
