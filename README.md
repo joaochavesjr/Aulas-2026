@@ -12,3 +12,5 @@ Material adicional para os cursos técnicos MVC:
 
 - Logística
   - Automação
+  
+  Update 17/03
