@@ -23,8 +23,8 @@
 - Settings
   - Adicionar colaboradores
   - Gerenciar permissões de acesso
-  - <span style="color:red">Danger Zone</span>
-    - <span style="color:red">Delete Repositório</span>
+  - <font color="red">Danger Zone</font>
+    - <font color="red">Delete Repositório</font>
 
 - Issues
   - Criação, resposta e fechamento
@@ -46,6 +46,6 @@
   - git log [--oneline]
   - git diff 
 
-- <span style="color:green;font-weight:bold">TODO:</span>
+- <font color="green">TODO:</font>
    - Github Actions
    - Github Copilot
