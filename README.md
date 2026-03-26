@@ -1,3 +1,5 @@
+![Logo](images/mvc.jpg)
+
 # Aulas-2026
 Material adicional para os cursos técnicos MVC:
 
@@ -12,5 +14,4 @@ Material adicional para os cursos técnicos MVC:
 
 - Logística
   - Automação
-  
-  Update 17/03
+
