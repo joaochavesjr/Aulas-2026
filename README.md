@@ -3,7 +3,7 @@
 # Aulas-2026
 Material adicional para os cursos técnicos MVC:
 
-- Desenvovlimento de Sistemas
+- Desenvolvimento de Sistemas
   - Inteligência Artificial
   - Versionamento de Código
   - Processos de Desenvolvimento e Metodologias Ágeis
