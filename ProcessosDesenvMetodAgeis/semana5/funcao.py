@@ -4,7 +4,7 @@
 
 def saudacao(nome):
     """Função que recebe um nome e retorna uma saudação personalizada."""
-    return f"Olá, {nome}! Bem-vindo(a) ao curso de Desenvolvimento Ágil!"
+    return f"Olá, {NotImplementedError}! Bem-vindo(a) ao curso de Desenvolvimento Ágil!"
 
 
 def teste_funcao():
@@ -16,4 +16,5 @@ def teste_funcao():
 
 if __name__ == "__main__":
     """Função principal para executar o teste."""
+    import pdb; pdb.set_trace()
     teste_funcao()

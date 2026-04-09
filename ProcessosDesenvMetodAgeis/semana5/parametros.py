@@ -20,4 +20,18 @@ def teste_parametros():
 
 if __name__ == "__main__":
     """Função principal para executar o teste."""
-    teste_parametros()
+    entrada = input("Numero de alunos:")
+    entrada = int(entrada)
+    b = 0
+    a = 0
+    c = 0
+    for i in range(entrada):
+        voto = input("Entre com o voto: %s" % i)
+        if voto == "A":
+            a += 1
+        elif voto == 'B':
+            b += 1
+        else:
+            c += 1
+    print("Votos a:",a, "Votos b:", b)  
+    #teste_parametros()

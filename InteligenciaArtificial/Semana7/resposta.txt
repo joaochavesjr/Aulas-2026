@@ -1,0 +1,69 @@
+1- Como uma inteligência artificial generativa realiza o processo de criação de novos conteúdos?
+2- R:Ela aprende padrões a partir de milhões de exemplos e utiliza aleatoriedade controlada para reconstruir conceitos.
+
+2- Qual é a principal diferença entre 'identificar' e 'fazer' no contexto da inteligência artificial?
+2- R:Identificar envolve reconhecer características fixas, enquanto fazer exige compreender estruturas profundamente para gerar outputs infinitos.
+A identificação é binária ou classificatória, enquanto a geração (fazer) requer a capacidade de criar variações inéditas a partir do entendimento estrutural.
+
+3- No desenvolvimento de sistemas com IA, o que caracteriza a técnica de 'Quantização'?
+3- R:A redução da precisão dos dados do modelo para economizar recursos computacionais, mantendo a qualidade próxima à original.
+Ao reduzir o peso dos parâmetros (ex: de 32 bits para 8 bits), o modelo torna-se mais leve e rápido sem uma perda catastrófica de performance
+
+4- Qual técnica de otimização foca em remover conexões desnecessárias dentro de uma rede neural?
+4- R: Pruning, o Pruning elimina pesos ou neurônios redundantes para tornar o modelo mais eficiente e menos denso.
+
+5- No pipeline de geração de texto, para que serve a integração de RAG (Retrieval−Augmented Generation)?
+5- R: Para fornecer fatos verificados e partes factuais ao modelo, mitigando alucinações.
+O RAG permite que o modelo consulte fontes externas de conhecimento antes de gerar uma resposta, aumentando a precisão factual.
+
+6- O que define a métrica de 'loopability' na geração de áudio por IA?
+6- R:A capacidade da trilha sonora transitar do fim para o início sem cliques ou artefatos perceptíveis.
+Garantir uma transição 'seamless' (sem costura) é essencial para trilhas de jogos ou fundos musicais contínuos
+
+7- Dentro de um pipeline de geração de imagens, qual é a função do 'inpainting'?
+7- R: Realizar correções específicas em partes segmentadas da imagem gerada.
+O inpainting permite ao usuário ou ao sistema 'pintar por dentro', regenerando apenas áreas selecionadas para corrigir erros
+
+8- Qual é a definição correta de Engenharia de Prompt (Prompt Engineering)?
+8- R: O processo de criar, projetar e ajustar pedidos para modelos de IA visando respostas mais precisas.
+Trata-se de uma técnica sistemática para otimizar a interação com o modelo de linguagem
+
+9- Como os modelos de linguagem aprendem a relação entre as palavras segundo o conceito de proximidade semântica?
+9- R: Através da identificação de padrões e relações onde palavras com significados próximos aparecem em contextos similares.
+Os modelos calculam a probabilidade de palavras coexistirem, criando um mapa de significados baseado no uso estatístico
+
+10- Sobre as Redes Generativas Adversariais (GANs), como ocorre o aprendizado dessa tecnologia?
+10- R:Através de uma competição entre duas redes: um gerador que cria conteúdos e um discriminador que tenta identificar o que é falso.
+Este sistema 'adversarial' força o gerador a se tornar cada vez mais realista para conseguir enganar o discriminador.
+
+11- Qual a estratégia recomendada para enfrentar o desafio da mudança rápida no mercado de trabalho causada pela IA?
+R: Colaborar com a IA em vez de competir com ela.
+
+12- Qual a função de um Engenheiro de Prompt?
+R: Criar e refinar comandos específicos para obter os melhores resultados de modelos de IA generativa.
+
+13- A IA generativa cria conteúdo 'copiando e colando' ou gerando novos padrões?
+R: Gerando novos pixels ou textos com base em padrões aprendidos em seu treinamento.
+
+14- O que caracteriza a 'proximidade semântica' em modelos de linguagem?
+R: A forma como a IA aprende e organiza relações e padrões estatísticos entre as palavras.
+
+15- Por que a criação com IA generativa é descrita como um 'processo iterativo'?
+R: Porque raramente o resultado ideal vem de primeira, exigindo ajustes e refinamentos no comando.
+
+16- O que se deve fazer se uma IA gerar um dado do qual você não tem certeza em um ambiente profissional?
+R: Realizar uma revisão humana completa e substituir a incerteza por hipóteses ou solicitações de mais dados.
+
+17- Na gestão de segurança, como a IA generativa pode ser aplicada?
+R: Na análise de padrões de dados para identificar vulnerabilidades ou comportamentos anômalos.
+
+18- Qual significado do termo: Alucinação de IA?
+R: Quando um modelo generativo inventa informações factuais de forma convincente, mas incorreta.
+
+19- A IA substitui a necessidade de revisão humana em tarefas críticas?
+R: Não, a revisão humana é essencial para verificar clareza, ética e precisão dos dados.
+
+20- A IA generativa baseia-se em __padrões aprendidos__ para criar novos conteúdos.
+
+21- A colaboração com a IA visa substituir a inteligência humana?
+R: Não, visa potencializar as capacidades humanas e otimizar tarefas repetitivas.
