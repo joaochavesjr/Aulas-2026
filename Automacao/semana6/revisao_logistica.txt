@@ -1,0 +1,119 @@
+1-Qual é a definição de Sistema de Gerenciamento de Armazéns (WMS)?
+É o software que controla a operação de armazéns, administrando recepção, armazenamento e movimentação;
+
+2-Qual software é responsável por otimizar o planejamento operacional e o rastreamento de transportes?
+Sistema de Gerenciamento de Transportes (TMS);
+
+3- Quais são os dois tópicos-base para o desenvolvimento das aplicações da automação na logística?
+Armazenagem e transportes;
+
+4- Quais são as etapas no fluxo de armazém manual?
+- Recebimento dos produtos fabricados;
+- Identificação e conferência;
+- Movimentação interna para armazenamento;
+- Separação;
+- Embalagem;
+- Despacho;
+- Transporte e entrega ao cliente.
+
+5- Qual é o diferencial no fluxo de transportes automatizado comparado ao manual?
+O trânsito possui rastreamento de veículo e carga;
+
+6- O que caracteriza a entrega ao cliente final no transporte automatizado?
+Presença de registros e evidências digitais.;
+
+7 - Qual é a principal função de um Drone na automação logística?
+Transporte de mercadorias de pequeno volume/baixo peso e inspeção;
+
+8 - Como são definidos os Veículos Guiados Automaticamente (AGV)?
+Equipamentos motorizados que levantam e movimentam cargas sem operação manual direta no veículo.;
+
+9 - Qual é a função do escâner ou leitor de código de barras na logística?
+Identificação e captura de dados de mercadorias e embalagens.;
+
+10- O que são AMRs no contexto da robótica logística?
+Robôs Móveis Autônomos.;
+
+11- Cite três tipos de robôs comumente utilizados em armazéns logísticos.
+Robôs autônomos móveis (AMR), robôs de picking e robôs de inventário.;
+
+12 - Qual é o objetivo da adequação de embalagem e armazenamento de materiais?
+Preparar materiais para transporte e garantir o armazenamento conforme padrões e especificações.;
+
+13 - O que envolve o planejamento do fluxo de materiais em relação à demanda?
+Prover capacidades necessárias (transporte/armazenamento) para atender pedidos dos clientes.;
+
+14 - A automação logística exige investimentos iniciais de _____ elevados.
+custos;
+
+15 - Qual tecnologia é usada para eliminar acidentes e aumentar a eficiência operacional de forma imediata?
+Robôs móveis autônomos (AMR).;
+
+16 - Quais são as fontes de energia comuns para empilhadeiras tradicionais?
+Gás, gasolina, diesel e eletricidade;
+
+17 - Qual componente automatizado é ideal para a movimentação e organização de mercadorias em armazéns?
+Empilhadeiras automatizadas (AGV).;
+
+18- Como os veículos automatizados são controlados?
+Por sistemas inteligentes que gerenciam a movimentação.;
+
+19- O que o WMS administra especificamente durante a preparação para o embarque?
+O processamento e a embalagem das mercadorias.;
+
+20- Como o trânsito é tratado no modelo de transporte manual vs. automatizado?
+No manual não há rastreamento; no automatizado há rastreamento de veículo e carga.
+
+21- O que os robôs de inventário realizam em um armazém?
+A contagem e verificação automatizada dos níveis de estoque.;
+
+22- Qual é a função dos robôs de picking?
+Realizar a coleta (separação) de itens específicos para atender pedidos.;
+
+23- O recebimento de materiais exige o planejamento de quais recursos comuns?
+Empilhadeiras, transpaleteiras e esteiras transportadoras;
+
+24- Em qual etapa do armazém logístico ocorre o agendamento de docas?
+No Recebimento.;
+
+25- Qual é a principal vantagem da automação na conferência de documentos?
+Maior agilidade e redução de erros humanos através da integração sistêmica.;
+
+26- Onde são utilizados os robôs autônomos móveis (AMR) para reduzir riscos?
+Na movimentação de cargas, eliminando a chance de acidentes com operadores humanos.;
+
+27- A automação logística reduz a necessidade de profissionais habilitados para operar veículos? Por quê?
+Sim, pois os sistemas inteligentes e robôs autônomos executam a movimentação sem intervenção humana direta;
+
+28- Qual a importância da integração entre robótica e WMS?
+Permite que o software controle os robôs em tempo real para otimizar o fluxo operacional.;
+
+29- O que significa a sigla AGV?
+Automated Guided Vehicle (Veículo Guiado Automaticamente).;
+
+30- Quais são as aplicações do AGV no recebimento de materiais?
+Movimentação de cargas das docas para a área de inspeção e armazenamento.;
+
+31- Qual componente tecnológico é essencial para a captura de 'registros e evidências' na entrega automatizada?
+Dispositivos móveis com softwares de comprovação de entrega integrados ao TMS.;
+
+32- No fluxo manual, por que o trânsito é considerado 'sem rastreamento'?
+Pela ausência de tecnologias de GPS ou sensores integrados que reportem a posição em tempo real.;
+
+33- O que caracteriza a Indústria 4.0 no setor logístico?
+A integração de IoT, conectividade e automação avançada nos processos.;
+
+34- O que significa 'prover as capacidades necessárias' no planejamento logístico?
+Garantir que haja veículos e espaço de armazém suficientes para a demanda prevista.;
+
+35- Qual é a relação entre WMS e AGV?
+O WMS envia ordens de serviço que o sistema de controle do AGV executa para movimentar paletes.;
+
+36- Cite uma aplicação de drones na inspeção logística.
+Monitoramento de telhados de armazéns ou verificação de inventário em locais altos (conforme sugerido pelo uso de drones decolando).;
+
+37- De acordo com o material, a automação visa aumentar a eficiência e eliminar _____.
+acidentes;
+
+38- Qual tecnologia permite a 'identificação' rápida na Etapa 1 do fluxo automatizado?
+Escâneres ou leitores de código de barras/RFID.;

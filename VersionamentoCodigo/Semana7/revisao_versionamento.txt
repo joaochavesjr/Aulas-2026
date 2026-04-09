@@ -1,0 +1,134 @@
+1- O que é o versionamento de código?
+É o processo de gerenciar diferentes versões de um software, permitindo rastrear alterações e recuperar estados anteriores.
+
+2- Quais são as quatro perguntas fundamentais que o histórico de versionamento responde?
+Quem mudou, o que mudou, por que mudou e quando mudou.
+
+3- No contexto de documentos de texto, o que é o recurso "Controle de Alterações" (Track Changes)?
+É uma ferramenta que permite revisar e aceitar ou rejeitar modificações feitas por diferentes autores antes da versão final.
+
+4- O que caracteriza o estado "detached HEAD" no Git?
+É o estado em que o ponteiro HEAD aponta para um commit específico em vez de uma branch, dificultando a gravação de novas alterações.
+
+5- Qual comando Git é usado para verificar quais arquivos foram modificados ou estão na área de estágio?
+git status
+
+6- Qual é a função do comando git add?
+Selecionar arquivos modificados para serem incluídos no próximo commit (área de staging).
+
+7- Para que serve o comando git commit -m "mensagem"?
+Para registrar permanentemente um snapshot das alterações selecionadas com uma descrição do que foi feito.
+
+8- Qual comando é utilizado para enviar os commits locais para um repositório remoto no GitHub?
+git push origin <branch_name>
+
+9- Qual comando traz as mudanças de outras pessoas do repositório remoto para o seu ambiente local?
+git pull origin <branch_name>
+
+10- Como se visualiza o histórico de commits de forma resumida em uma única linha por registro?
+git log --oneline
+
+11- Para explorar os arquivos de um projeto em uma versão específica do passado, qual comando deve ser usado?
+git checkout <hash-do-commit>
+
+12- Como restaurar apenas um arquivo específico para uma versão anterior sem alterar o restante do projeto?
+$git checkout <hash> -- <arquivo>
+
+13- Após explorar uma versão antiga via checkout, como retornar para a versão mais recente na branch principal?
+git checkout main
+
+14- Qual é a recomendação para lidar com conflitos de versão no Git?
+O Git não escolhe sozinho; ele solicita uma decisão informada do desenvolvedor para resolver as divergências.
+
+15- Por que é recomendado usar pull --rebase antes de um push?
+Para evitar commits de merge desnecessários e manter o histórico de alterações limpo e linear.
+
+16- O que é um hash de commit no Git?
+É um identificador único alfanumérico que representa um snapshot específico do projeto.
+
+17- Qual arquivo é essencial para evitar que arquivos temporários ou sensíveis sejam enviados ao repositório?
+.gitignore
+
+18- Por que não se deve enviar segredos ou credenciais diretamente no repositório de código?
+Por questões de segurança e rastreabilidade, uma vez que qualquer pessoa com acesso ao histórico poderá visualizá-los.
+
+19- Para que serve o arquivo README em um projeto?
+Para fornecer uma visão geral, pré-requisitos e instruções sobre como rodar e contribuir com o projeto.
+
+20- Em uma documentação de API, o que deve constar na seção de "Contrato da API"?
+Links OpenAPI/Swagger, exemplos de requests/responses, códigos de erro e métodos de autenticação.
+
+21- Quando se deve optar por um repositório privado no GitHub?
+Quando o objetivo é proteger propriedade intelectual, segredos comerciais ou contratos específicos.
+
+22- O que deve ser incluído em um arquivo .env.example?
+As variáveis de ambiente necessárias para o projeto, mas sem os valores reais e sensíveis.
+
+23- Qual é a importância de escrever boas mensagens de commit?
+Facilitar a compreensão do histórico para outros membros do time e para o "eu do futuro".
+
+24- Qual comando permite visualizar o histórico de commits de forma gráfica no terminal?
+git log --graph
+
+25- Além do terminal, onde mais o Git costuma ser integrado para facilitar o fluxo de trabalho visual?
+Em IDEs, como o VS Code.
+
+26- No fluxo de versionamento, o que representa um snapshot?
+Uma fotografia do estado de todos os arquivos do projeto em um determinado momento no tempo.
+
+27- O que define a "rastreabilidade" em um sistema de versionamento?"
+A capacidade de identificar exatamente qual alteração causou um erro ou mudança no comportamento do software.
+
+28- Qual é o primeiro passo prático para reverter um erro identificado no histórico?
+Identificar o commit problemático através do comando git log.
+
+29- O que é recomendado fazer antes de enviar suas alterações para o repositório remoto?
+Sincronizar o repositório local com as últimas mudanças do servidor usando o comando pull.
+
+30- Qual é a utilidade de um changelog curto dentro de um documento?
+Registrar as decisões e alterações feitas de forma rápida para consulta futura.
+
+31- Por que se recomenda enviar links de documentos na nuvem em vez de anexos por e-mail?
+Para garantir que todos acessem sempre a versão mais atualizada e centralizada do arquivo.
+
+32- O que o comando git status indica quando um arquivo aparece em vermelho?
+Indica que o arquivo foi modificado, mas ainda não foi adicionado à área de staging (git add).
+
+33- O que o comando git status indica quando um arquivo aparece em verde?
+Indica que o arquivo está na área de staging e pronto para ser incluído no próximo commit.
+
+34- Qual é a principal diferença entre versionamento de código e versionamento de software?
+O versionamento de código foca nas linhas de script; o de software foca nas entregas e versões estáveis para o usuário.
+
+35- Por que commits pequenos são considerados uma boa prática?
+Porque facilitam a revisão de código, a identificação de bugs e a reversão de alterações específicas.
+
+36- Qual elemento do README ajuda novos desenvolvedores a configurar o ambiente rapidamente?
+A lista de pré-requisitos e comandos de instalação (como npm install ou Docker).
+
+37- Em projetos de portfólio, por que a visibilidade pública é importante?
+Para demonstrar competência técnica e compartilhar conhecimento com a comunidade.
+
+38- O que o Git faz quando dois desenvolvedores alteram a mesma linha de um arquivo simultaneamente?
+Ele identifica um conflito e interrompe o processo para que o usuário decida qual versão manter.
+
+39- Como o Git armazena a história de um projeto?
+Através de uma série encadeada de commits, onde cada um aponta para o seu antecessor.
+
+40- Qual é a função do termo ""origin"" nos comandos Git?
+É o nome padrão dado ao repositório remoto principal de onde o projeto foi clonado.
+
+41- Para que serve a seção "Testes e qualidade" no README de uma API?
+Para instruir sobre como rodar testes automatizados e verificar a cobertura de código (coverage).
+
+42- O que o parâmetro -m no comando de commit representa?
+Representa "message", indicando que o texto a seguir será a descrição do commit.
+
+43- Qual é o risco de não utilizar um arquivo .gitignore?
+Poluir o repositório com arquivos desnecessários (como pastas de bibliotecas) ou expor dados sensíveis.
+
+44- O que significa o conceito de "responsabilidade" em um repositório próprio?
+Significa que o autor é responsável por manter, documentar e garantir a integridade do código ali depositado.
+
+45- Qual é o benefício de definir um responsável por seção em um trabalho colaborativo?
+Evitar sobreposição de tarefas e facilitar a organização de quem deve revisar cada alteração.
