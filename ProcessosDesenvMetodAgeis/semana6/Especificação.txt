@@ -1,0 +1,14 @@
+Muitas pessoas não sabem quanto gastam por dia. O programa deve permitir que o usuário informe vários valores
+ de gastos e, ao final, mostrar o total e a média gasto no dia.
+
+⚙ Requisitos do sistema
+
+O script deve:
+
+1- Permita que o usuário entre com vários valores de gastos do dia;
+2- Encerrar a entrada quando o usuário digitar "fim";
+3- Calcular a soma total dos gastos do dia e imprimir na tela;
+4- Imprimir também a média destes gastos; 
+
+
+
