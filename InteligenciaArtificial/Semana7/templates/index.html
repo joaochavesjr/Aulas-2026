@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Professor IA - Game</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            text-align: center;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 60%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        textarea {
+            width: 90%;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🎮 Professor IA - Laboratório</h1>
+
+<div class="box">
+    <label>Matéria:</label>
+    <select id="materia">
+        <option>matemática</option>
+        <option>física</option>
+        <option>biologia</option>
+        <option>história</option>
+    </select>
+
+    <p>🌟 Nível: <span id="nivel">1</span> | XP: <span id="xp">0</span></p>
+
+    <button onclick="novaPergunta()">Gerar Pergunta</button>
+
+    <h3 id="pergunta"></h3>
+
+    <textarea id="resposta" placeholder="Digite sua resposta aqui..."></textarea>
+    <br>
+    <button onclick="corrigir()">Enviar Resposta</button>
+
+    <div id="avaliacao"></div>
+</div>
+
+<script>
+let nivel = 1;
+let xp = 0;
+let perguntaAtual = "";
+
+function novaPergunta() {
+    fetch("/gerar_pergunta", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            materia: document.getElementById("materia").value,
+            nivel: nivel
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        perguntaAtual = data.pergunta;
+        document.getElementById("pergunta").innerText = perguntaAtual;
+    });
+}
+
+function corrigir() {
+    fetch("/corrigir", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            materia: document.getElementById("materia").value,
+            pergunta: perguntaAtual,
+            resposta: document.getElementById("resposta").value
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        xp += data.nota;
+
+        if (xp >= nivel * 20) {
+            nivel++;
+            alert("🎉 Você subiu de nível!");
+        }
+
+        document.getElementById("nivel").innerText = nivel;
+        document.getElementById("xp").innerText = xp;
+        document.getElementById("avaliacao").innerText = data.avaliacao;
+    });
+}
+</script>
+
+</body>
+</html>
+
