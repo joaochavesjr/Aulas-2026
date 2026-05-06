@@ -1,0 +1,12 @@
+Qual a precisão da avaliação utilizando Cross Validation? 
+- O que isto significa? 
+R:A acurácia mede a proporção total de previsões corretas, considerando todas as classes. Com 96.04%, o modelo está classificando corretamente a maioria das amostras, indicando um desempenho confiável e consistente.
+Qual a revocação na avaliação utilizando Cross Validation? 
+- O que isto significa? 
+R:O F1 Score, que equilibra precisão e revocação, é de 96.09%. Isso reflete um bom equilíbrio entre evitar falsos positivos e falsos negativos, tornando o modelo robusto e bem ajustado para o problema.
+Qual o f1 score na avaliação utilizando Cross Validation? 
+- O que isto significa? 
+R: Significado: a precisão mede a proporção de previsões positivas corretas em relação ao total de previsões positivas feitas pelo modelo. Com 97.50%, isso indica que quando o modelo prevê que algo é positivo, ele está correto na grande maioria das vezes. Isso sugere que o modelo comete poucos falsos positivos, sendo confiável em prever corretamente a classe positiva.
+Qual a acurácia na avaliação utilizando Cross Validation? 
+- O que isto significa? 
+R: A acurácia mede a proporção total de previsões corretas, considerando todas as classes. Com 96.04%, o modelo está classificando corretamente a maioria das amostras, indicando um desempenho confiável e consistente.
