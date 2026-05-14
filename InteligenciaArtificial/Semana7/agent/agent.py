@@ -2,9 +2,9 @@
 
 import ollama  # cliente oficial do Ollama
 
-MODEL_NAME = "qwen3.5:4b"
-MODEL_NAME = "qwen3:8b"
-
+#MODEL_NAME = "qwen3.5:4b"
+#MODEL_NAME = "qwen3:8b"
+MODEL_NAME = "qwen2.5:1.5b"
 
 def call_ollama(messages, model=MODEL_NAME, temperature=0.2):
     """
