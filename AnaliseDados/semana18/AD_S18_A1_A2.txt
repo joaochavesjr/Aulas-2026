@@ -1,0 +1,76 @@
+Aula 1
+
+// Nova tabela
+calendario = 
+ADDCOLUMNS(
+    CALENDAR(DATE(2020, 1, 1), MAX(alunos_matriculados_por_turma[mes_referencia])),
+    "Ano", YEAR([Date]),
+    "Mês", FORMAT([Date], "MMMM"),
+    "Trimestre", FORMAT([Date], "Q"),
+    "Dia da Semana", FORMAT([Date], "w")
+)
+
+// Inserir na tabela alunos_matriculados_por_turma
+mes_referencia = DATE([Ano],[Mês],1)
+
+// Tabela de Medidas
+Alunos Desmatriculados Ano Anterior = CALCULATE(
+    SUM(alunos_matriculados_por_turma[Alunos Desmatriculados]),
+    SAMEPERIODLASTYEAR('calendario'[Date])
+)
+
+
+Alunos Desmatriculados Mês Anterior = CALCULATE(
+    SUM(alunos_matriculados_por_turma[Alunos Desmatriculados]),
+    PREVIOUSMONTH('calendario'[Date])
+)
+
+Alunos Matriculados Ano Anterior = CALCULATE(
+    SUM(alunos_matriculados_por_turma[Alunos Novos Matriculados]),
+    SAMEPERIODLASTYEAR('calendario'[Date])
+)
+
+Aula 2
+
+Diff Percentual Alunos Desmatriculados MoM = 
+[Alunos Desmatriculados MoM] - 
+CALCULATE(
+    [Alunos Desmatriculados MoM],
+    PREVIOUSMONTH(Calendario[Date])
+)
+
+Diff Percentual Alunos Desmatriculados QoQ = 
+[Alunos Desmatriculados QoQ] - 
+CALCULATE(
+    [Alunos Desmatriculados QoQ],
+    PREVIOUSQUARTER(Calendario[Date])
+)
+
+Diff Percentual Alunos Desmatriculados YoY = 
+[Alunos Desmatriculados YoY] - 
+CALCULATE(
+    [Alunos Desmatriculados YoY],
+    SAMEPERIODLASTYEAR(Calendario[Date])
+)
+
+Diff Percentual Alunos Matriculados MoM = 
+[Alunos Matriculados MoM] - 
+CALCULATE(
+    [Alunos Matriculados MoM],
+    PREVIOUSMONTH(Calendario[Date])
+)
+
+
+Diff Percentual Alunos Matriculados QoQ = 
+[Alunos Matriculados QoQ] - 
+CALCULATE(
+    [Alunos Matriculados QoQ],
+    PREVIOUSQUARTER(Calendario[Date])
+)
+
+Diff Percentual Alunos Matriculados YoY = 
+[Alunos Matriculados YoY] - 
+CALCULATE(
+    [Alunos Matriculados YoY],
+    SAMEPERIODLASTYEAR(Calendario[Date])
+)
