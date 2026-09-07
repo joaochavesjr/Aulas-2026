@@ -1,0 +1,68 @@
+// Aula 3
+
+todas_atividades = 
+UNION (
+    ADDCOLUMNS(alunos_basketball,"atividade","basketball"),
+    ADDCOLUMNS(alunos_clube_livro,"atividade","clube_livro"),
+    ADDCOLUMNS(alunos_futsal,"atividade","futsal"),
+    ADDCOLUMNS(alunos_xadrez,"atividade","xadrez"),
+    ADDCOLUMNS(alunos_olimpiadas_matematica,"atividade","olimpiadas_matematica")
+)
+
+
+nenhuma_atividade = 
+EXCEPT (
+    base_alunos_total,
+    SELECTCOLUMNS (
+        todas_atividades,
+        "RA", todas_atividades[RA],
+        "Nome", todas_atividades[Nome],
+        "Sobrenome", todas_atividades[Sobrenome],
+        "Sexo", todas_atividades[Sexo],
+        "Série", todas_atividades[Série],
+        "Turma", todas_atividades[Turma]
+    )
+)
+
+
+participam_todas_atividades = 
+INTERSECT (
+    INTERSECT (
+        INTERSECT ( alunos_basketball, alunos_clube_livro ),
+        INTERSECT ( alunos_futsal, alunos_xadrez )
+    ),
+    alunos_olimpiadas_matematica
+)
+
+// Aula 4
+
+Parametros = {"Total de Matrículas", "Total de Transferências", "Saldo de Matriculas"}
+
+// Criar a tabela Medidas Dinâmicas utilizando o botão "Inserir Dados"
+
+KPI Dinâmico = 
+VAR _selected_value = SELECTEDVALUE ( Parametros[KPI] )
+VAR _alunos_matriculados = SUM ( alunos_matriculados_por_turma[Alunos Novos Matriculados] )
+VAR _alunos_transferidos = SUM ( alunos_matriculados_por_turma[Alunos Desmatriculados] )
+VAR _alunos_saldo = _alunos_matriculados - _alunos_transferidos
+RETURN
+    SWITCH (
+        TRUE (),
+        _selected_value = "Total de Matrículas", _alunos_matriculados,
+        _selected_value = "Total de Transferências", _alunos_transferidos,
+        _selected_value = "Saldo de Matriculas", _alunos_saldo,
+        BLANK ()
+    )
+
+Parametros Atividades = {"Basketball", "Clube do Livro", "Futsal","Olimpiadas Matemática","Xadrez"}
+
+Alunos por Atividade = 
+SWITCH(
+    TRUE(),
+    SELECTEDVALUE('Parametros Atividades'[Atividade]) = "Basketball", COUNTROWS(alunos_basketball),
+    SELECTEDVALUE('Parametros Atividades'[Atividade]) = "Clube do Livro", COUNTROWS(alunos_clube_livro),
+    SELECTEDVALUE('Parametros Atividades'[Atividade]) = "Futsal", COUNTROWS(alunos_futsal),
+    SELECTEDVALUE('Parametros Atividades'[Atividade]) = "Olimpiadas Matemática", COUNTROWS(alunos_olimpiadas_matematica),
+    SELECTEDVALUE('Parametros Atividades'[Atividade]) = "Xadrez", COUNTROWS(alunos_olimpiadas_matematica),
+    "Selecione uma Atividade"
+)
