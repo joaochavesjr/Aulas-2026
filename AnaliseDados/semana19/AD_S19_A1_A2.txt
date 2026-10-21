@@ -1,0 +1,97 @@
+---------------------------------------------------------
+Aula 1: Exercício 1:
+---------------------------------------------------------
+
+let
+    Alunos_Basketball = Table.AddColumn(alunos_basketball, "Atividade", each "Basketball"),
+    Alunos_Clube_Livro = Table.AddColumn(alunos_clube_livro, "Atividade", each "Clube do Livro"),
+    Alunos_Futsal = Table.AddColumn(alunos_futsal, "Atividade", each "Futsal"),
+    Alunos_Olimpiadas_Matematica = Table.AddColumn(alunos_olimpiadas_matematica, "Atividade", each "Olimpíadas de Matemática"),
+    Alunos_Xadrez = Table.AddColumn(alunos_xadrez, "Atividade", each "Xadrez"),
+    Tabela_Combinada = Table.Combine({Alunos_Basketball, Alunos_Clube_Livro, Alunos_Futsal, Alunos_Olimpiadas_Matematica, Alunos_Xadrez})
+in
+    Tabela_Combinada
+
+---------------------------------------------------------
+Exercício 2:
+---------------------------------------------------------
+
+let
+    Interseccao_Xadrez_Futsal = Table.SelectRows(alunos_xadrez, (linha) => Table.Contains(alunos_futsal, linha))
+in
+    Interseccao_Xadrez_Futsal
+
+---------------------------------------------------------
+Exercício 3:
+---------------------------------------------------------
+let
+    Diferenca_Xadrez_Futsal = Table.SelectRows(alunos_xadrez, (linha) => not Table.Contains(alunos_futsal, linha))
+in
+    Diferenca_Xadrez_Futsal
+
+---------------------------------------------------------
+Exercício 4:
+---------------------------------------------------------
+
+let
+    Agrupamento_Turma = Table.Group(
+        alunos_matriculados_por_turma,
+        {"Ano"},
+        {
+            {"Total Alunos Novos Matriculados", each List.Sum([Alunos Novos Matriculados]), type number},
+            {"Total Alunos Desmatriculados", each List.Sum([Alunos Desmatriculados]), type number}
+        }
+    )
+in
+    Agrupamento_Turma
+
+---------------------------------------------------------
+Exercício 5:
+---------------------------------------------------------
+
+let
+    DadosPivot = Table.Pivot(
+        todas_atividades,
+        List.Distinct(todas_atividades[Atividade]),                  // Lista com as atividades únicas
+        "Atividade",                                                 // Coluna a ser pivotada
+        "Atividade",                                                    // Valor de preenchimento (indicador de participação)
+        List.Count                                                     // Valor padrão caso não exista (deixa como null)
+    )
+in
+    DadosPivot
+
+
+let
+    Unpivot_Atividades = Table.UnpivotOtherColumns(atividades_pivot, {"RA","Nome","Sobrenome","Sexo","Turma","Série","Status"}, "Atividade", "Valor")
+in
+    Unpivot_Atividades
+
+
+---------------------------------------------------------
+Aula 2: Exercício 1:
+---------------------------------------------------------
+let
+
+    Fonte = Excel.Workbook(File.Contents("C:\Users\joaoc\Downloads\AnaliseDados\Semana19\[DADOS]ANO2C3B3S19A1A2A3A4\RECURSOS_AULA\[DADOS]ANO2C3B3S19A2_BASE.xlsx"), null, true),
+    Sheet1_Sheet = Fonte{[Item="Sheet1",Kind="Sheet"]}[Data],
+    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+    
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"RA", Int64.Type}, {"Nome Completo", type text}, {"Atividade", type text}, {"Série", type text}, {"Turma", type text}, {"Data de Nascimento", type date}, {"Nota Final", type number}, {"Participação", type text}}),
+    
+    // Primeiro Nome e Sobrenome
+    PrimeiroNOme = Table.AddColumn(#"Tipo Alterado", "Primeiro Nome", each Text.BeforeDelimiter([Nome Completo], " ")),
+    Sobrenome = Table.AddColumn(PrimeiroNOme, "Sobrenome", each Text.AfterDelimiter([Nome Completo], " ", 0)),
+
+    //concatenando texto
+    #"Turma Completa" = Table.AddColumn(Sobrenome, "Turma Completa", each [Série] & " - " & [Turma]),
+
+    //substituindo texto
+    #"Replace" = Table.ReplaceValue(#"Turma Completa", "Inativo", "Desistente", Replacer.ReplaceText, {"Participação"}),
+    
+    //calculo de dias para próximo aniversário
+    DataAtual = Date.From(DateTime.LocalNow()),
+    ProximoAniversario = Table.AddColumn(#"Replace", "Próximo Aniversário", each #date(Date.Year(DataAtual), Date.Month([Data de Nascimento]), Date.Day([Data de Nascimento]))),
+    AniversarioAjustado = Table.TransformColumns(ProximoAniversario, {{"Próximo Aniversário", each if _ < DataAtual then Date.AddYears(_, 1) else _}}),
+    DiasFaltando = Table.AddColumn(AniversarioAjustado, "Dias para Próximo Aniversário", each Duration.Days(Date.From([Próximo Aniversário]) - DataAtual))
+in
+    DiasFaltando
